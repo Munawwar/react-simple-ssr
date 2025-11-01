@@ -1,0 +1,30 @@
+{
+  "name": "react-simple-ssr",
+  "version": "1.0.0",
+  "description": "Simple React SSR demo without build tools",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "concurrently \"node --watch-path=server.js server.js\" \"livereload -w 100 'static, template.html'\""
+  },
+  "keywords": [
+    "react",
+    "ssr",
+    "server-side-rendering"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "htm": "^3.1.1",
+    "html-safe-json": "^2.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "livereload": "^0.10.3",
+    "nodemon": "^3.1.10"
+  }
+}
