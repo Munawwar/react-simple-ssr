@@ -4,7 +4,7 @@ How to do React Server-Side Rendering (SSR) without meta frameworks or any build
 
 High level idea:
 
-- Setup dependencies with importmap to `esm.sh` on client [1] and same dependencies as node modules for server [2]
+- importmap and node modules works on aliased names like `import .. from 'react'`. If you map the word `react` to `esm.sh` on client via importmap [1] and same as node module for server [2] then your react components can work both on server and client without code change / bundler
 - From server, use react renderToString() function for HTML generation [3] and also pass server data as JSON in the HTML
 - On client, hydrate DOM without throwing away the existing DOM
 
